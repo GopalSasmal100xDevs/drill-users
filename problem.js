@@ -50,9 +50,30 @@ function getAllUserStayInGermany(users) {
   return usersLiveInGermany;
 }
 
-export { interestedInVideoGame, getAllUserStayInGermany };
+// Q3 Find all users with masters Degree.
+
+function getAllUsersWithMastersDeg(users) {
+  if (!Object.keys(users).length === 0) {
+    return [];
+  }
+
+  const usersWithMastersDeg = [];
+  const regex = /masters/i;
+  for (let user in users) {
+    if (regex.test(users[user]?.qualification)) {
+      usersWithMastersDeg.push(user);
+    }
+  }
+
+  return usersWithMastersDeg;
+}
+
+export {
+  interestedInVideoGame,
+  getAllUserStayInGermany,
+  getAllUsersWithMastersDeg,
+};
 
 /*
-Q3 Find all users with masters Degree.
 Q4 Group users based on their Programming language mentioned in their designation.
 */
