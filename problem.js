@@ -1,5 +1,3 @@
-import users from "./user.js";
-
 // Q1 Find all users who are interested in playing video games.
 function interestedInVideoGame(users) {
   if (users && !Object.keys(users).length === 0) {
