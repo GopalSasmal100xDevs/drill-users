@@ -1,6 +1,12 @@
 import users from "./user.js";
-import { interestedInVideoGame, getAllUserStayInGermany } from "./problem.js";
+import {
+  interestedInVideoGame,
+  getAllUserStayInGermany,
+  getAllUsersWithMastersDeg,
+} from "./problem.js";
 
 // const ans = interestedInVideoGame(users);
-const ans2 = getAllUserStayInGermany(users);
-console.log(ans2);
+// const ans2 = getAllUserStayInGermany(users);
+const ans3 = getAllUsersWithMastersDeg(users);
+// const ans4 = getAllUsersWithMastersDeg({});
+console.log(ans3);
