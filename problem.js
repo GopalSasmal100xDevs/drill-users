@@ -8,7 +8,7 @@ function interestedInVideoGame(users) {
 
   const interestedVideoGamePlayers = [];
   for (let user in users) {
-    const { interests, interest } = users[user];
+    const { interests } = users[user];
     if (interests && interests.length === 0) {
       continue;
     }
