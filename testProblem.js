@@ -6,12 +6,14 @@ import {
   getDevelopers,
 } from "./problem.js";
 
-// const ans = interestedInVideoGame(users);
-// const ans2 = getAllUserStayInGermany(users);
-const ans3 = getAllUsersWithMastersDeg(users);
-// const ans4 = getAllUsersWithMastersDeg({});
-console.log(ans3);
+console.log("Interested Video game players are ", interestedInVideoGame(users));
+// console.log("Interested Video game players are ", interestedInVideoGame());
 
-console.log(getDevelopers(users));
+console.log("Users who stay in Germany", getAllUserStayInGermany(users));
+// console.log("Users who stay in Germany", getAllUserStayInGermany());
 
-console.log(getDevelopers());
+console.log("Users who have master degree", getAllUsersWithMastersDeg(users));
+// console.log("Users who have master degree", getAllUsersWithMastersDeg({}));
+
+console.log("Developers ", getDevelopers(users));
+// console.log("Developers ", getDevelopers());
