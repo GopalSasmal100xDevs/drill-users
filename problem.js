@@ -2,7 +2,7 @@ import users from "./user.js";
 
 // Q1 Find all users who are interested in playing video games.
 function interestedInVideoGame(users) {
-  if (!Object.keys(users).length === 0) {
+  if (users && !Object.keys(users).length === 0) {
     return [];
   }
 
@@ -12,19 +12,10 @@ function interestedInVideoGame(users) {
     if (interests && interests.length === 0) {
       continue;
     }
-    if (interest && interest.length === 0) {
-      continue;
-    }
 
     const regex = /video game/i;
     for (let index = 0; interests && index < interests.length; index++) {
       if (regex.test(interests[index])) {
-        interestedVideoGamePlayers.push(user);
-      }
-    }
-
-    for (let index = 0; interest && index < interest.length; index++) {
-      if (regex.test(interest[index])) {
         interestedVideoGamePlayers.push(user);
       }
     }
@@ -36,7 +27,7 @@ function interestedInVideoGame(users) {
 // Q2 Find all users staying in Germany.
 
 function getAllUserStayInGermany(users) {
-  if (!Object.keys(users).length === 0) {
+  if (users && !Object.keys(users).length === 0) {
     return [];
   }
 
@@ -53,7 +44,7 @@ function getAllUserStayInGermany(users) {
 // Q3 Find all users with masters Degree.
 
 function getAllUsersWithMastersDeg(users) {
-  if (!Object.keys(users).length === 0) {
+  if (users && !Object.keys(users).length === 0) {
     return [];
   }
 
@@ -76,6 +67,7 @@ function getDevelopers(users) {
   if (users && !Object.keys(users).length === 0) {
     return {};
   }
+
   const developers = { python: [], javascript: [], golang: [], others: [] };
   const pythonRegex = /python/i;
   const javascriptRegex = /javascript/i;
