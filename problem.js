@@ -33,13 +33,26 @@ function interestedInVideoGame(users) {
   return interestedVideoGamePlayers;
 }
 
-export { interestedInVideoGame };
+// Q2 Find all users staying in Germany.
+
+function getAllUserStayInGermany(users) {
+  if (!Object.keys(users).length === 0) {
+    return [];
+  }
+
+  const usersLiveInGermany = [];
+  for (let user in users) {
+    if (users[user]?.nationality === "Germany") {
+      usersLiveInGermany.push(user);
+    }
+  }
+
+  return usersLiveInGermany;
+}
+
+export { interestedInVideoGame, getAllUserStayInGermany };
 
 /*
-
-Q2 Find all users staying in Germany.
 Q3 Find all users with masters Degree.
 Q4 Group users based on their Programming language mentioned in their designation.
-
-
 */
